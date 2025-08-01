@@ -98,3 +98,27 @@ button#auth-btn {
   text-decoration: underline;
   cursor: pointer;
 }
+.bot-container {
+  margin-top: 2rem;
+  background-color: #f3f3f3;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+.bot-face {
+  font-size: 2rem;
+}
+
+.bot-dialogue {
+  flex: 1;
+  font-family: 'Playfair Display', serif;
+}
+
+.hidden {
+  display: none;
+}
