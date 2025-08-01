@@ -1,0 +1,27 @@
+{
+  "name": "nowayhome-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "openai": "^5.11.0"
+  },
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelharold/NoWayHome.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelharold/NoWayHome/issues"
+  },
+  "homepage": "https://github.com/michaelharold/NoWayHome#readme"
+}

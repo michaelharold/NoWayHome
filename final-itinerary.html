@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Final Itinerary 🎉 | No Way Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body >
+  <header>
+    <h1><span class="bold">No Way</span> Home ✈️</h1>
+    <p class="tagline">Here's what you've (almost) booked... 😏</p>
+  </header>
+
+  <main class="ticket-container">
+    <!-- ✈️ Return Ticket -->
+    <div class="ticket-card">
+      <div class="ticket-top">
+        <div>
+          <h2>Return Flight</h2>
+          <p><strong>Name:</strong> <span id="ret-user">[Name]</span></p>
+          <p><strong>From:</strong> <span id="ret-from">[City]</span></p>
+          <p><strong>To:</strong> <span id="ret-to">[City]</span></p>
+        </div>
+        <div>
+          <p><strong>Date:</strong> <span id="ret-date">[Date]</span></p>
+          <p><strong>Flight:</strong> NWH-007</p>
+          <p><strong>Seat:</strong> 21A</p>
+        </div>
+      </div>
+      <div class="ticket-footer">
+        <p>Surprised? This was pulled straight from your wishlist! 😈</p>
+      </div>
+    </div>
+
+    <!-- 🎬 Movie Ticket -->
+    <div class="ticket-card">
+      <div class="ticket-top">
+        <div>
+          <h2>Movie Ticket</h2>
+          <p><strong>Name:</strong> <span id="mov-user">[Name]</span></p>
+          <p><strong>Movie:</strong> <span id="mov-name">[Movie]</span></p>
+          <p><strong>Location:</strong> <span id="mov-loc">[City]</span></p>
+        </div>
+        <div>
+          <p><strong>Date:</strong> <span id="mov-date">[Date]</span></p>
+          <p><strong>Time:</strong> 7:30 PM</p>
+          <p><strong>Seat:</strong> Row C – Seat 12</p>
+        </div>
+      </div>
+      <div class="ticket-footer">
+        <p>Two days before your flight, we’ve got you chilling 🍿</p>
+      </div>
+    </div>
+
+    <!-- 🎯 CTA -->
+    <div class="prompt-section">
+      <p>Ready to actually book it for real?</p>
+      <a href="https://www.makemytrip.com/" target="_blank">
+        <button>Book for Real on MakeMyTrip 🚀</button>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    const profile = JSON.parse(localStorage.getItem('userProfile')) || {};
+    const returnDateStr = localStorage.getItem('returnDate') || '2025-08-12';
+    const wishlistCity = localStorage.getItem('wishlistCity') || 'Barcelona';
+
+    // Prepare movie ticket data
+    const genre = profile.movieGenre || 'Drama';
+    const fakeMovieByGenre = {
+      Action: "No Way to Explode",
+      Romance: "Love at Gate 5",
+      Drama: "The Last Layover",
+      Comedy: "Terminal Laughs",
+      Horror: "Cabin 666",
+      SciFi: "Flights to Mars"
+    };
+    const movieName = fakeMovieByGenre[genre] || "The Final Boarding";
+
+    const retDate = new Date(returnDateStr);
+    const movDate = new Date(retDate);
+    movDate.setDate(retDate.getDate() - 2);
+
+    // Populate Return Ticket
+    document.getElementById('ret-user').innerText = profile.name || 'Traveler';
+    document.getElementById('ret-from').innerText = wishlistCity;
+    document.getElementById('ret-to').innerText = profile.homeCountry || 'India';
+    document.getElementById('ret-date').innerText = returnDateStr;
+
+    // Populate Movie Ticket
+    document.getElementById('mov-user').innerText = profile.name || 'Traveler';
+    document.getElementById('mov-name').innerText = movieName;
+    document.getElementById('mov-loc').innerText = wishlistCity;
+    document.getElementById('mov-date').innerText = movDate.toISOString().split("T")[0];
+  </script>
+</body>
+</html>
