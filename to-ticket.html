@@ -5,10 +5,11 @@
   <title>TO Ticket Booking | No Way Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="ticket-body">
+<body >
   <header>
     <h1><span class="bold">No Way</span> Home ✈️</h1>
-    <p class="tagline">Trying to control your journey? Bold move. 😏</p>
+    <p class="tagline">You pick the flight ✈️ We pick the fate</p>
+  
   </header>
 
   <main class="login-container">
@@ -27,8 +28,9 @@
     </form>
   </main>
 
-  <!-- Fake SAN-AI bot for consistency -->
+  <!-- 🤖 SAN-AI Bot -->
   <div id="sanai-icon" class="sanai-icon">🤖</div>
+
   <div id="sanai-window" class="sanai-window hidden">
     <div class="sanai-header">
       <span>SAN-AI – Trip Advisor</span>
@@ -38,6 +40,12 @@
       <div class="chat-area" id="chat-area">
         <p><strong>SAN-AI:</strong> I see you’re trying to be in control... cute.</p>
       </div>
+
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Say something..." />
+        <button id="send-btn">Send</button>
+      </div>
+
       <div class="wishlist-panel">
         <h3>Just Book It!!</h3>
         <ul id="wishlist-items"></ul>
@@ -46,7 +54,7 @@
   </div>
 
   <script>
-    // On form submit, redirect to movie-booked page
+    // Redirect to movie-booked page
     document.getElementById('to-ticket-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const from = document.getElementById('from').value;
@@ -54,32 +62,54 @@
       const date = document.getElementById('date').value;
 
       localStorage.setItem('toFlight', JSON.stringify({ from, to, date }));
-
       window.location.href = 'movie-booked.html';
     });
 
-    // Bot open/close logic
+    // Bot toggle
     const sanaiIcon = document.getElementById("sanai-icon");
     const sanaiWindow = document.getElementById("sanai-window");
     const closeBtn = document.getElementById("close-bot");
 
-    sanaiIcon.addEventListener("click", () => {
-      sanaiWindow.classList.remove("hidden");
-    });
+    sanaiIcon.addEventListener("click", () => sanaiWindow.classList.remove("hidden"));
+    closeBtn.addEventListener("click", () => sanaiWindow.classList.add("hidden"));
 
-    closeBtn.addEventListener("click", () => {
-      sanaiWindow.classList.add("hidden");
-    });
-
-    // Wishlist display (optional)
+    // Wishlist logic
     const wishlist = JSON.parse(localStorage.getItem("userWishlist")) || [];
     const wishlistContainer = document.getElementById("wishlist-items");
-
-    wishlist.forEach((item) => {
+    wishlist.forEach(item => {
       const li = document.createElement("li");
       li.textContent = item;
       wishlistContainer.appendChild(li);
     });
+
+    // Chat logic
+    const sendBtn = document.getElementById("send-btn");
+    const userInput = document.getElementById("user-input");
+    const chatArea = document.getElementById("chat-area");
+
+    sendBtn.addEventListener("click", sendMessage);
+    userInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+
+    function sendMessage() {
+      const message = userInput.value.trim();
+      if (!message) return;
+
+      const userMsg = document.createElement("p");
+      userMsg.innerHTML = `<strong>You:</strong> ${message}`;
+      chatArea.appendChild(userMsg);
+
+      const botMsg = document.createElement("p");
+      botMsg.innerHTML = `<strong>SAN-AI:</strong> I'll pretend I understood that. 😅`;
+      chatArea.appendChild(botMsg);
+
+      userInput.value = "";
+      chatArea.scrollTop = chatArea.scrollHeight;
+    }
   </script>
 </body>
 </html>
