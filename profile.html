@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Setup | No Way Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <script type="module" src="profile.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1><span class="bold">No Way</span> Home ✈️</h1>
+    <p class="tagline">Setting you up for a surprise</p>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <h2>🎒 Complete Your Profile</h2>
+      <form id="profile-form">
+        <label>Home Country</label>
+        <input type="text" id="home-country" required />
+
+        <label>Wishlist Destinations (comma separated)</label>
+        <input type="text" id="wishlist" required />
+
+        <label>Favorite Food</label>
+        <input type="text" id="food" required />
+
+        <label>Preferred Movie Genre</label>
+        <input type="text" id="genre" required />
+
+        <button type="submit">Save & Continue</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
