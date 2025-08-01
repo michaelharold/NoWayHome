@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <title>Return Ticket | No Way Home</title>
   <link rel="stylesheet" href="style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body >
   <header>
-    <h1><span class="bold">No Way</span> Home ✈️</h1>
-    <p class="tagline">Welcome to your unexpected return flight... 👀</p>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <img src="NWH_Logo-removebg-preview.png" alt="Logo" style="height: 100px; margin-bottom: 10px;" />
+      <button class="about-btn">About</button>
+    </div>
   </header>
 
   <main class="ticket-container">
-    <div class="ticket-card">
+    <div class="ticket-card spin-in">
       <div class="ticket-top">
         <div>
           <h2>Return Flight</h2>
@@ -32,8 +35,8 @@
     </div>
 
     <div class="prompt-section">
-      <p>Wanna book a TO ticket to <strong id="to-place">Barcelona</strong> instead? 🤔</p>
-      <button id="book-to-ticket-btn">YES, Let's Go</button>
+      <p>Wanna book a ticket to <strong id="to-place">Barcelona</strong> instead? 🤔</p>
+      <button id="book-to-ticket-btn">YES, Let's Go!</button>
     </div>
   </main>
 

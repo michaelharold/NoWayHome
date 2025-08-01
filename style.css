@@ -1,4 +1,78 @@
-/* Style for toggle links in login/signup */
+/* Center main containers on all pages */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px); /* header height offset */
+}
+/* Spin and pop-in animation for booking container */
+.spin-pop-in {
+  animation: spinPopIn 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes spinPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) rotateY(-360deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.08) rotateY(20deg);
+  }
+  80% {
+    transform: scale(0.96) rotateY(-8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+  }
+}
+/* Spin-in entrance animation for ticket card */
+.spin-in {
+  animation: spinIn 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes spinIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) rotateY(-180deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.08) rotateY(20deg);
+  }
+  80% {
+    transform: scale(0.96) rotateY(-8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+  }
+}
+
+.pop-in {
+  animation: popInScale 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes popInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  80% {
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 #toggle-link, #toggle-login {
   color: #1e40af;
   text-decoration: underline;
@@ -27,15 +101,17 @@ button:active {
 }
 /* Style for About button in header */
 .about-btn {
-  background-color: #333;
-  color: #000;
+  position: absolute;
+  top: 3.5rem;
+  right: 5rem;
+  color:black;
+  padding: 0.6rem 1.2rem;
   border: none;
-  padding: 10px 24px;
-  border-radius: 6px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+  border-radius: 20px;
+  background-color: white;
+  font-weight: bold;
+  font-family: 'Montserrat', serif;
   cursor: pointer;
-  margin-top: 8px;
 }
 .about-btn:hover {
   transition: transform 0.12s;
@@ -49,11 +125,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
+
 
 /* 🧢 Header */
 header {
@@ -64,7 +142,15 @@ header {
   padding: 0.6rem;
   text-align: center;
   border-bottom: 2px solid #e0f7ff;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+body {
+  padding-top: 120px; /* Adjust for header height */
 }
 
 h1 {
@@ -101,13 +187,13 @@ h2{
 
 /* 🔐 Login Container */
 .login-container {
-  margin-top: 4rem;
   background: linear-gradient(to bottom right, #b3e5fc, #e1f5fe);
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 300px;
   text-align: center;
+  margin: 4rem auto 0 auto;
 }
 
 form label {
@@ -283,7 +369,7 @@ button {
 
 .ticket-container {
   max-width: 700px;
-  margin: 3rem auto;
+  margin: 4rem auto 0 auto;
   padding: 1rem;
   text-align: center;
 }
