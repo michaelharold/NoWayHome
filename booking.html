@@ -5,19 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Book a Flight | No Way Home</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-      <img src="NWH_Logo-removebg-preview.png" alt="Logo" style="height: 100px; margin-bottom: 10px;" />
-      <button class="about-btn">About</button>
-    </div>
+    <h1><span class="bold">No Way</span> Home ✈️</h1>
+    <p class="tagline">Where are you *trying* to go? 😏</p>
   </header>
 
   <main>
     <div class="login-container">
-      <h2> Book Your Flight</h2>
+      <h2>🛫 Book Your Flight</h2>
       <form id="booking-form">
         <label>From</label>
         <input type="text" id="from" required />
@@ -30,44 +28,33 @@
 
         <button type="submit">Book (or so you think)</button>
       </form>
-      <div id="itinerary-output"></div>
     </div>
   </main>
 
-  <!-- 🤖 SAN-AI Bot Icon -->
+  <!-- SAN-AI BOT ICON -->
   <div id="sanai-icon" class="sanai-icon">🤖</div>
 
-  <!-- 🤖 SAN-AI Expanded Window -->
-  <!-- <div id="sanai-window" class="sanai-window hidden">
+  <!-- SAN-AI BOT WINDOW -->
+  <div id="sanai-window" class="sanai-window hidden">
     <div class="sanai-header">
-      <span>SAN-AI 🤖 – Your Chaotic Trip Advisor</span>
-      <button id="close-sanai" class="close-btn">❌</button>
+      <span>SAN-AI – Trip Advisor</span>
+      <button class="close-btn" id="close-bot">❌</button>
     </div>
     <div class="sanai-body">
       <div class="chat-area" id="chat-area">
-        <p>Hi! Planning something chaotic today?</p>
+        <p><strong>SAN-AI:</strong> Where do you dream to go? 🌍</p>
       </div>
       <div class="wishlist-panel">
-        <h3>Your Wishlist 🌍</h3>
-        <ul id="wishlist-list"></ul>
+        <h3>Just Book It!!</h3>
+        <ul id="wishlist-items"></ul>
       </div>
     </div>
-  </div> -->
-  <div id="chatbotBox" style="display: none; position: fixed; bottom: 30px; left: 30px; width: 420px; height: 400px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.2); border-radius: 12px; overflow: hidden; z-index: 999;">
-    <div style="background: #4b7bec; color: #fff; padding: 10px; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
-      <span>SAN-AI Bot</span>
-      <button id="closeChatbot" style="background: transparent; color: #fff; border: none; font-size: 16px; cursor: pointer;">✖</button>
-    </div>
-    <div style="display: flex; height: 360px;">
-      <iframe src="chatbot.html" width="60%" height="100%" style="border: none;"></iframe>
-      <div class="wishlist-panel" style="width: 40%; height: 100%; border-left: 1px solid #e0e0e0; background: #e0f0ff; padding: 1rem; box-sizing: border-box;">
-        <h3>Your Wishlist 🌍</h3>
-        <ul id="wishlist-list"></ul>
-      </div>
+    <div class="sanai-input">
+      <input type="text" id="user-input" placeholder="Ask SAN-AI something..." />
+      <button id="send-btn">Send</button>
     </div>
   </div>
 
-
-  <script type="module" src="booking.js"></script>
+  <script type="module" src="./booking.js"></script>
 </body>
 </html>

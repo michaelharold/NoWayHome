@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Return Ticket | No Way Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="ticket-body">
+  <header>
+    <h1><span class="bold">No Way</span> Home ✈️</h1>
+    <p class="tagline">Welcome to your unexpected return flight... 👀</p>
+  </header>
+
+  <main class="ticket-container">
+    <div class="ticket-card">
+      <div class="ticket-top">
+        <div>
+          <h2>Return Flight</h2>
+          <p><strong>Name:</strong> <span id="user-name">[Your Name]</span></p>
+          <p><strong>From:</strong> <span id="from-city">Barcelona</span></p>
+          <p><strong>To:</strong> <span id="to-city">India</span></p>
+        </div>
+        <div>
+          <p><strong>Date:</strong> <span id="flight-date">2025-08-12</span></p>
+          <p><strong>Flight:</strong> NWH-007</p>
+          <p><strong>Seat:</strong> 21A</p>
+        </div>
+      </div>
+      <div class="ticket-footer">
+        <p>We surprised you with this return ticket based on your wishlist. 😈</p>
+      </div>
+    </div>
+
+    <div class="prompt-section">
+      <p>Wanna book a TO ticket to <strong id="to-place">Barcelona</strong> instead? 🤔</p>
+      <button id="book-to-ticket-btn">YES, Let's Go</button>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('book-to-ticket-btn').addEventListener('click', () => {
+      window.location.href = 'to-ticket.html';
+    });
+
+    // (Optional) Populate with localStorage/session if used in booking.js
+    const profile = JSON.parse(localStorage.getItem('userProfile')) || {};
+    const randomCity = localStorage.getItem('wishlistCity') || 'Barcelona';
+    const flightDate = localStorage.getItem('returnDate') || '2025-08-12';
+
+    document.getElementById('user-name').innerText = profile.name || 'Traveler';
+    document.getElementById('from-city').innerText = randomCity;
+    document.getElementById('flight-date').innerText = flightDate;
+    document.getElementById('to-place').innerText = randomCity;
+  </script>
+</body>
+</html>

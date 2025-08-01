@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TO Ticket Booking | No Way Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="ticket-body">
+  <header>
+    <h1><span class="bold">No Way</span> Home ✈️</h1>
+    <p class="tagline">Trying to control your journey? Bold move. 😏</p>
+  </header>
+
+  <main class="login-container">
+    <h2>🛬 Book Your TO Ticket</h2>
+    <form id="to-ticket-form">
+      <label>From</label>
+      <input type="text" id="from" required />
+
+      <label>To</label>
+      <input type="text" id="to" required />
+
+      <label>Travel Date</label>
+      <input type="date" id="date" required />
+
+      <button type="submit">Book Ticket</button>
+    </form>
+  </main>
+
+  <!-- Fake SAN-AI bot for consistency -->
+  <div id="sanai-icon" class="sanai-icon">🤖</div>
+  <div id="sanai-window" class="sanai-window hidden">
+    <div class="sanai-header">
+      <span>SAN-AI – Trip Advisor</span>
+      <button class="close-btn" id="close-bot">❌</button>
+    </div>
+    <div class="sanai-body">
+      <div class="chat-area" id="chat-area">
+        <p><strong>SAN-AI:</strong> I see you’re trying to be in control... cute.</p>
+      </div>
+      <div class="wishlist-panel">
+        <h3>Just Book It!!</h3>
+        <ul id="wishlist-items"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // On form submit, redirect to movie-booked page
+    document.getElementById('to-ticket-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const from = document.getElementById('from').value;
+      const to = document.getElementById('to').value;
+      const date = document.getElementById('date').value;
+
+      localStorage.setItem('toFlight', JSON.stringify({ from, to, date }));
+
+      window.location.href = 'movie-booked.html';
+    });
+
+    // Bot open/close logic
+    const sanaiIcon = document.getElementById("sanai-icon");
+    const sanaiWindow = document.getElementById("sanai-window");
+    const closeBtn = document.getElementById("close-bot");
+
+    sanaiIcon.addEventListener("click", () => {
+      sanaiWindow.classList.remove("hidden");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      sanaiWindow.classList.add("hidden");
+    });
+
+    // Wishlist display (optional)
+    const wishlist = JSON.parse(localStorage.getItem("userWishlist")) || [];
+    const wishlistContainer = document.getElementById("wishlist-items");
+
+    wishlist.forEach((item) => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      wishlistContainer.appendChild(li);
+    });
+  </script>
+</body>
+</html>

@@ -247,3 +247,95 @@ button {
   border-radius: 10px;
   border-left: 5px solid #f59e0b;
 }
+.sanai-input {
+  display: flex;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 0 0 12px 12px;
+}
+
+#user-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#send-btn {
+  margin-left: 10px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* ✈️ Ticket Page Theme */
+.ticket-body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom, #eaf4ff, #ffffff);
+  padding: 2rem;
+}
+
+.ticket-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.ticket-card {
+  background: white;
+  border: 3px solid #003366;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  font-family: 'Playfair Display', serif;
+  color: #002b5c;
+  margin-bottom: 2rem;
+}
+
+.ticket-top {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.ticket-top div {
+  width: 45%;
+}
+
+.ticket-footer {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: #555;
+}
+
+.prompt-section {
+  background: #f0f4ff;
+  border: 2px dashed #0055aa;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  color: #003366;
+}
+
+.prompt-section button {
+  background: #0055aa;
+  color: white;
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+.prompt-section button:hover {
+  background: #002b5c;
+}

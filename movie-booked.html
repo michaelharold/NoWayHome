@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Ticket Booked 🎬 | No Way Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="ticket-body">
+  <header>
+    <h1><span class="bold">No Way</span> Home ✈️</h1>
+    <p class="tagline">🎟️ Movie Surprise, Delivered</p>
+  </header>
+
+  <main class="ticket-container">
+    <div class="ticket-card">
+      <div class="ticket-top">
+        <div>
+          <h2>Movie Ticket</h2>
+          <p><strong>Name:</strong> <span id="movie-user">[Your Name]</span></p>
+          <p><strong>Movie:</strong> <span id="movie-name">[Genre Surprise]</span></p>
+          <p><strong>Location:</strong> <span id="movie-location">[Destination]</span></p>
+        </div>
+        <div>
+          <p><strong>Date:</strong> <span id="movie-date">[Date]</span></p>
+          <p><strong>Time:</strong> 7:30 PM</p>
+          <p><strong>Seat:</strong> Row C – Seat 12</p>
+        </div>
+      </div>
+      <div class="ticket-footer">
+        <p>Your wishlist movie vibes, 2 days before takeoff. 🍿🎬</p>
+      </div>
+    </div>
+
+    <div class="prompt-section">
+      <p>Let’s see your full travel plan?</p>
+      <button onclick="window.location.href='final-itinerary.html'">See Itinerary 🧳</button>
+    </div>
+  </main>
+
+  <script>
+    const profile = JSON.parse(localStorage.getItem('userProfile')) || {};
+    const returnDate = new Date(localStorage.getItem('returnDate') || '2025-08-12');
+    const wishlistCity = localStorage.getItem('wishlistCity') || 'Barcelona';
+
+    // Movie date is 2 days before return date
+    returnDate.setDate(returnDate.getDate() - 2);
+    const movieDate = returnDate.toISOString().split("T")[0];
+
+    // Genre-based fake movie name
+    const genre = profile.movieGenre || "Drama";
+    const fakeMovieByGenre = {
+      Action: "No Way to Explode",
+      Romance: "Love at Gate 5",
+      Drama: "The Last Layover",
+      Comedy: "Terminal Laughs",
+      Horror: "Cabin 666",
+      SciFi: "Flights to Mars"
+    };
+    const movieName = fakeMovieByGenre[genre] || "The Final Boarding";
+
+    document.getElementById('movie-user').innerText = profile.name || "Traveler";
+    document.getElementById('movie-name').innerText = movieName;
+    document.getElementById('movie-location').innerText = wishlistCity;
+    document.getElementById('movie-date').innerText = movieDate;
+  </script>
+</body>
+</html>
