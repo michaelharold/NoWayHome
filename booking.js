@@ -16,6 +16,24 @@ const closeSanai = document.getElementById('close-sanai');
 const wishlistList = document.getElementById('wishlist-list');
 const chatArea = document.getElementById('chat-area');
 
+// Chatbot pop-up logic
+const chatbotBox = document.getElementById('chatbotBox');
+const closeChatbot = document.getElementById('closeChatbot');
+
+if (sanaiIcon && chatbotBox) {
+  sanaiIcon.addEventListener('click', () => {
+    chatbotBox.style.display = 'block';
+    sanaiIcon.style.display = 'none';
+  });
+}
+
+if (closeChatbot && chatbotBox) {
+  closeChatbot.addEventListener('click', () => {
+    chatbotBox.style.display = 'none';
+    sanaiIcon.style.display = 'block';
+  });
+}
+
 // Toggle SAN-AI visibility
 sanaiIcon.addEventListener('click', () => {
   sanaiWindow.classList.remove('hidden');

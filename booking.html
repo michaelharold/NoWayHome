@@ -38,7 +38,7 @@
   <div id="sanai-icon" class="sanai-icon">🤖</div>
 
   <!-- 🤖 SAN-AI Expanded Window -->
-  <div id="sanai-window" class="sanai-window hidden">
+  <!-- <div id="sanai-window" class="sanai-window hidden">
     <div class="sanai-header">
       <span>SAN-AI 🤖 – Your Chaotic Trip Advisor</span>
       <button id="close-sanai" class="close-btn">❌</button>
@@ -52,7 +52,21 @@
         <ul id="wishlist-list"></ul>
       </div>
     </div>
+  </div> -->
+  <div id="chatbotBox" style="display: none; position: fixed; bottom: 30px; left: 30px; width: 420px; height: 400px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.2); border-radius: 12px; overflow: hidden; z-index: 999;">
+    <div style="background: #4b7bec; color: #fff; padding: 10px; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+      <span>SAN-AI Bot</span>
+      <button id="closeChatbot" style="background: transparent; color: #fff; border: none; font-size: 16px; cursor: pointer;">✖</button>
+    </div>
+    <div style="display: flex; height: 360px;">
+      <iframe src="chatbot.html" width="60%" height="100%" style="border: none;"></iframe>
+      <div class="wishlist-panel" style="width: 40%; height: 100%; border-left: 1px solid #e0e0e0; background: #e0f0ff; padding: 1rem; box-sizing: border-box;">
+        <h3>Your Wishlist 🌍</h3>
+        <ul id="wishlist-list"></ul>
+      </div>
+    </div>
   </div>
+
 
   <script type="module" src="booking.js"></script>
 </body>
