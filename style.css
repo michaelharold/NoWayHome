@@ -1,18 +1,19 @@
+/* 🌐 Base Styles */
 body {
   margin: 0;
   font-family: 'Montserrat', serif;
   background: linear-gradient(to bottom, #a2daff, #e6f7ff);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
   background-image: url('maccy-_F4MzL_cI8E-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
 
+/* 🧢 Header */
 header {
   background-image: url('Bgm1.png');
   background-size: cover;
@@ -39,6 +40,7 @@ h1 {
   margin-top: 0.3rem;
 }
 
+/* 📍 About Button (from collaborator) */
 .about-btn {
   position: absolute;
   top: 3.5rem;
@@ -48,11 +50,11 @@ h1 {
   border-radius: 20px;
   background-color: white;
   font-weight: bold;
-  cursor: pointer;
   font-family: 'Montserrat', serif;
-  
+  cursor: pointer;
 }
 
+/* 🔐 Login Container */
 .login-container {
   margin-top: 4rem;
   background: linear-gradient(to bottom right, #b3e5fc, #e1f5fe);
@@ -61,13 +63,6 @@ h1 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 300px;
   text-align: center;
-}
-
-.login-container h2 {
-  background: url('https://i.imgur.com/xdYqLqG.png') no-repeat center;
-  background-size: contain;
-  color: #1a237e;
-  margin-bottom: 1rem;
 }
 
 form label {
@@ -87,7 +82,7 @@ input {
   font-size: 1rem;
 }
 
-button#auth-btn {
+button {
   background-color: #1e40af;
   color: white;
   padding: 0.7rem 2rem;
@@ -97,37 +92,113 @@ button#auth-btn {
   cursor: pointer;
 }
 
-#toggle-text {
-  margin-top: 1rem;
-  font-size: 0.9rem;
+/* 🤖 SAN-AI BOT STYLES */
+.sanai-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #0077ff;
+  color: white;
+  font-size: 28px;
+  padding: 12px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  transition: transform 0.3s ease;
 }
 
-#toggle-link {
-  color: #1e40af;
-  text-decoration: underline;
+.sanai-icon:hover {
+  transform: scale(1.1);
+}
+
+/* 📦 Expanded SAN-AI Window */
+.sanai-window {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  width: 550px;
+  max-width: 95%;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid #0077ff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.sanai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #0077ff;
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: white;
   cursor: pointer;
 }
-.bot-container {
-  margin-top: 2rem;
-  background-color: #f3f3f3;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+.sanai-body {
   display: flex;
-  align-items: flex-start;
+  padding: 1rem;
   gap: 1rem;
-  max-width: 600px;
+  flex-direction: row;
 }
 
-.bot-face {
-  font-size: 2rem;
+/* 💬 Chat Area */
+.chat-area {
+  flex: 2;
+  background: #f7f9fc;
+  padding: 1rem;
+  border-radius: 8px;
+  height: 300px;
+  overflow-y: auto;
 }
 
-.bot-dialogue {
+/* 🌍 Wishlist Panel */
+.wishlist-panel {
   flex: 1;
+  background: #e0f0ff;
+  padding: 1rem;
+  border-radius: 8px;
+  height: 300px;
+  overflow-y: auto;
   font-family: 'Playfair Display', serif;
 }
 
+.wishlist-panel h3 {
+  margin-top: 0;
+}
+
+#wishlist-items {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#wishlist-items li {
+  margin-bottom: 6px;
+  background: #e1e9ff;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+/* 📌 Hidden Utility */
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+/* ✈️ Itinerary Card */
+.itinerary {
+  background: #fef3c7;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 5px solid #f59e0b;
 }
