@@ -1,17 +1,24 @@
 body {
   margin: 0;
-  font-family: 'Playfair Display', serif;
-  background: linear-gradient(to bottom, #b3e0ff, #e6f7ff);
+  font-family: 'Montserrat', serif;
+  background: linear-gradient(to bottom, #a2daff, #e6f7ff);
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  background-image: url('maccy-_F4MzL_cI8E-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
 }
 
 header {
-  background: linear-gradient(to right, #cceeff, #d9f0ff);
+  background-image: url('Bgm1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
-  padding: 1rem;
+  padding: 0.6rem;
   text-align: center;
   border-bottom: 2px solid #e0f7ff;
   position: relative;
@@ -34,14 +41,16 @@ h1 {
 
 .about-btn {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.4rem 0.8rem;
+  top: 3.5rem;
+  right: 5rem;
+  padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 20px;
   background-color: white;
   font-weight: bold;
   cursor: pointer;
+  font-family: 'Montserrat', serif;
+  
 }
 
 .login-container {
