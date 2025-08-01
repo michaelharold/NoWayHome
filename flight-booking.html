@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Flight - No Way Home ✈️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>✈️ No Way Home</h1>
+            <div class="nav-user">
+                <span id="userGreeting">Hello, Adventurer! 👋</span>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </nav>
+
+        <div class="booking-container">
+            <div class="booking-header">
+                <h2>🎫 Book Your Flight</h2>
+                <p>Plan your trip... we'll handle the surprises 😉</p>
+            </div>
+
+            <form id="flightBookingForm" class="booking-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="fromLocation">✈️ From</label>
+                        <select id="fromLocation" required>
+                            <option value="">Where are you now?</option>
+                            <option value="New York, NY">🏙️ New York, NY</option>
+                            <option value="Los Angeles, CA">🌴 Los Angeles, CA</option>
+                            <option value="Chicago, IL">🏢 Chicago, IL</option>
+                            <option value="Miami, FL">🏖️ Miami, FL</option>
+                            <option value="London, UK">🇬🇧 London, UK</option>
+                            <option value="Paris, France">🇫🇷 Paris, France</option>
+                            <option value="Tokyo, Japan">🇯🇵 Tokyo, Japan</option>
+                            <option value="Sydney, Australia">🇦🇺 Sydney, Australia</option>
+                            <option value="Dubai, UAE">🏜️ Dubai, UAE</option>
+                            <option value="Singapore">🇸🇬 Singapore</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="toLocation">🎯 To</label>
+                        <select id="toLocation" required>
+                            <option value="">Where to?</option>
+                            <option value="Barcelona, Spain">🇪🇸 Barcelona, Spain</option>
+                            <option value="Rome, Italy">🇮🇹 Rome, Italy</option>
+                            <option value="Amsterdam, Netherlands">🇳🇱 Amsterdam, Netherlands</option>
+                            <option value="Bangkok, Thailand">🇹🇭 Bangkok, Thailand</option>
+                            <option value="Rio de Janeiro, Brazil">🇧🇷 Rio de Janeiro, Brazil</option>
+                            <option value="Cape Town, South Africa">🇿🇦 Cape Town, South Africa</option>
+                            <option value="Istanbul, Turkey">🇹🇷 Istanbul, Turkey</option>
+                            <option value="Mumbai, India">🇮🇳 Mumbai, India</option>
+                            <option value="Seoul, South Korea">🇰🇷 Seoul, South Korea</option>
+                            <option value="Mexico City, Mexico">🇲🇽 Mexico City, Mexico</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="departureDate">📅 Departure Date</label>
+                        <input type="date" id="departureDate" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="passengers">👥 Passengers</label>
+                        <select id="passengers" required>
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passengers</option>
+                            <option value="3">3 Passengers</option>
+                            <option value="4">4 Passengers</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">
+                    🔍 Search Flights
+                </button>
+            </form>
+
+            <div id="flightResults" class="flight-results hidden">
+                <h3>✨ Available Flights</h3>
+                <div id="flightsList" class="flights-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

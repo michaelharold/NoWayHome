@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Journey - No Way Home ✈️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>✈️ No Way Home</h1>
+            <div class="nav-user">
+                <span id="userGreeting">Hello, Adventurer! 👋</span>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </nav>
+
+        <div class="summary-container">
+            <div class="summary-header">
+                <h2>🎭 Your Complete Journey</h2>
+                <p class="summary-tagline">You planned a normal trip... we gave you <strong>destiny</strong>.</p>
+            </div>
+
+            <div class="journey-timeline">
+                <div class="timeline-item" id="originalFlight">
+                    <div class="timeline-icon">✈️</div>
+                    <div class="timeline-content">
+                        <h4>Original Flight</h4>
+                        <p>Your planned journey begins...</p>
+                        <div class="flight-summary"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" id="toTicket">
+                    <div class="timeline-icon">🎯</div>
+                    <div class="timeline-content">
+                        <h4>TO Ticket</h4>
+                        <p>Getting you to your surprise destination</p>
+                        <div class="flight-summary"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" id="movieNight">
+                    <div class="timeline-icon">🎬</div>
+                    <div class="timeline-content">
+                        <h4>Movie Night</h4>
+                        <p>Perfect entertainment before your return</p>
+                        <div class="movie-summary"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" id="surpriseReturn">
+                    <div class="timeline-icon">🎪</div>
+                    <div class="timeline-content">
+                        <h4>Surprise Return</h4>
+                        <p>The grand finale - returning from your dream destination</p>
+                        <div class="flight-summary"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="journey-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalFlights">0</div>
+                    <div class="stat-label">Total Flights</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalDestinations">0</div>
+                    <div class="stat-label">Destinations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalDays">0</div>
+                    <div class="stat-label">Days of Adventure</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalCost">$0</div>
+                    <div class="stat-label">Total Investment</div>
+                </div>
+            </div>
+
+            <div class="final-message">
+                <div class="message-card">
+                    <h3>🌟 Congratulations, Adventurer!</h3>
+                    <p>What started as a simple flight booking has become an epic journey of discovery. You've embraced the chaos, accepted the surprises, and chosen adventure over the ordinary.</p>
+                    
+                    <div class="message-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">🎭</span>
+                            <span class="highlight-text">You turned a trip into a story</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">🌍</span>
+                            <span class="highlight-text">You chose wonder over routine</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✨</span>
+                            <span class="highlight-text">You said yes to the unexpected</span>
+                        </div>
+                    </div>
+
+                    <p class="final-quote">"Not all those who wander are lost... but some are beautifully confused." 🧭</p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="downloadItinerary" class="btn btn-primary">
+                    📄 Download Itinerary
+                </button>
+                <button id="shareJourney" class="btn btn-accent">
+                    📱 Share Your Story
+                </button>
+                <button id="bookAnother" class="btn btn-secondary">
+                    🎪 Book Another Adventure
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="summary.js"></script>
+</body>
+</html>
