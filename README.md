@@ -1,47 +1,43 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# [Project Name] 🎯
+# [NO WAY HOME] 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
-
+### Team Name: Tubelight
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Michael Harold Sony - TKM College Of Engineering
+- Member 2: Saniya Jose - TKM College Of Engineering
 
 ### Project Description
-[2-3 lines about what your project does]
+No Way Home is a chaotic-good travel booking website that mischievously reroutes your trips to your dream destinations — even if you were just trying to go home. It sneakily adds surprise destinations, movie tickets, and snacks to make sure you “accidentally” fulfill your travel wishlist.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Sometimes we make travel plans and stick to them. Boring. Or worse!we keep talking about our bucket list destinations but never go. Who needs self-control?
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+We hijack your travel plans for your own good.
+Book a flight home? Too bad because we’re secretly adding a return trip from your favorite city.
+We’ll even throw in a surprise movie ticket before you come back.
+No refunds. No guilt. Maximum mischief.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+Languages: HTML, CSS, JavaScript
+Backend: Firebase (Auth, Firestore)
+Tools:Canva (design assets)
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
 
 ### Implementation
-For Software:
 # Installation
-[commands]
+npm install
 
 # Run
-[commands]
+Frontend is deployed via Firebase Hosting. Just open index.html or run:
+firebase deploy
 
 ### Project Documentation
 For Software:
@@ -59,15 +55,6 @@ For Software:
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
 
 # Build Photos
 ![Components](Add photo of your components here)
@@ -88,9 +75,10 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+
+- Michael Harold Sony:Authentication and database integration,built all pages (login, booking, profile etc.) with HTML, CSS, and JavaScript
+- Saniya Jose:Frontend design,animations
+
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
