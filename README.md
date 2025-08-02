@@ -41,6 +41,43 @@ firebase deploy
 
 ### Project Documentation
 For Software:
+  📁 NO WAY HOME
+  ├── .firebase/
+  ├── node_modules/
+  ├── .env
+  ├── .firebaserc
+  ├── .gitignore
+  ├── 404.html → Custom 404 error page
+  ├── README.md → Project overview and instructions
+  ├── auth.js → Firebase authentication logic
+  ├── firebase-config.js → Firebase project configuration
+  ├── firebase.json → Firebase hosting and functions settings
+  ├── package.json → Node project manifest
+  ├── package-lock.json → Exact package versions
+  ├── style.css → Global styles for the website
+
+📄 Core HTML Pages:
+  ├── index.html → Landing page with login/signup
+  ├── profile.html → User fills preferences (home, wishlist, food, genre)
+  ├── booking.html → One-way trip booking interface
+  ├── return-ticket.html → Surprise return trip from wishlist
+  ├── to-ticket.html → Initial booked one-way ticket
+  ├── movie-booked.html → Recommended movie ticket before return
+  ├── final-itinerary.html → Summary of flights, movie, etc.
+  ├── chatbot.html → Chatbot page for travel help/fun
+
+📄 JavaScript Logic Files:
+  ├── profile.js → Handles profile form and Firestore writes
+  ├── booking.js → Booking form logic + surprise logic
+  ├── return-ticket.js → Displays surprise return trip info
+  ├── san-ai.js → Gemini/GPT-4o chatbot logic
+  ├── auth.js → Login/register with Firebase
+  ├── firebase-config.js → Firestore + auth initialization
+
+📁 Assets:
+  ├── Bgm1.png → Background image
+  ├── NWH_Logo-removebg.png → Website logo
+  ├── maccy_... .png → Likely illustration or asset
 
 # Screenshots (Add at least 3)
 Login Page
