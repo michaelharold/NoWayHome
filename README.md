@@ -43,13 +43,20 @@ firebase deploy
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
+Front Page
+![WhatsApp Image 2025-08-02 at 7 15 33 AM](https://github.com/user-attachments/assets/fd2eaf1e-a6c4-4494-aaf7-0fc8ccbf66e6)
+
 *Add caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
+![Screenshot2]
+![WhatsApp Image 2025-08-02 at 7 15 33 AM (1)](https://github.com/user-attachments/assets/30200a41-5a0d-4461-beb3-0117a7ccf8bf)
+
+
 *Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
+![Screenshot3]
+![WhatsApp Image 2025-08-02 at 7 16 23 AM](https://github.com/user-attachments/assets/21d99f37-b80f-478b-a8c2-e188ae24f591)
+
 *Add caption explaining what this shows*
 
 # Diagrams
@@ -68,11 +75,9 @@ For Software:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+https://drive.google.com/file/d/1PSbDcUJknK5XKtEaTcdxqhzokE_2mTNi/view?usp=drive_link
 *Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
 
