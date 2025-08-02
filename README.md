@@ -43,25 +43,58 @@ firebase deploy
 For Software:
 
 # Screenshots (Add at least 3)
-Front Page
+Login Page
 ![WhatsApp Image 2025-08-02 at 7 15 33 AM](https://github.com/user-attachments/assets/fd2eaf1e-a6c4-4494-aaf7-0fc8ccbf66e6)
 
-*Add caption explaining what this shows*
+Secure user login portal for accessing the No Way Home platform — where you pick the flight, and we picks your fate
 
 ![Screenshot2]
 ![WhatsApp Image 2025-08-02 at 7 15 33 AM (1)](https://github.com/user-attachments/assets/30200a41-5a0d-4461-beb3-0117a7ccf8bf)
 
 
-*Add caption explaining what this shows*
+Personalize your journey — set your home, wishlist destinations, favorite food, and movie vibes.
 
 ![Screenshot3]
 ![WhatsApp Image 2025-08-02 at 7 16 23 AM](https://github.com/user-attachments/assets/21d99f37-b80f-478b-a8c2-e188ae24f591)
 
-*Add caption explaining what this shows*
+
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+User Onboarding & Profile Setup
+The user signs up/logs in via Firebase Authentication.
+They're prompted to fill a fun profile form — including:
+
+1.Home country
+2.Wishlist destinations
+3.Favorite food
+4.Preferred movie genres
+
+Trip Booking Flow
+The user tries to book a simple one-way trip (e.g., to their hometown).
+But here’s the twist...
+
+Mischievous Redirection Logic
+The app “secretly” adds a return ticket from a wishlist destination instead (7 days later), nudging them toward their travel dreams.
+
+Trip Extras Generation
+Based on their movie genre preferences and travel dates:
+
+A movie ticket (2 days before return) is suggested using the TMDb API.
+
+Their favorite food is used to personalize suggestions (or maybe AI commentary).
+
+SAN-AI Chatbot (Gemini or GPT-4o)
+An AI-powered assistant helps with:
+
+Explaining their trip setup
+
+Giving packing tips, safety advice
+
+Making the surprise fun, yet practical
+
+Data Storage & Retrieval (Firebase Firestore)
+All user preferences, trip data, and chatbot interactions are stored/retrieved from Firebase Firestore.
+
 
 ### Project Demo
 # Video
