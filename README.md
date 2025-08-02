@@ -63,16 +63,6 @@ Front Page
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
 
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
 ### Project Demo
 # Video
 https://drive.google.com/file/d/1PSbDcUJknK5XKtEaTcdxqhzokE_2mTNi/view?usp=drive_link
