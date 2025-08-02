@@ -1,3 +1,25 @@
+/* Flip-in animation for itinerary tickets */
+.flip-in {
+  animation: flipIn 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg) scale(0.7);
+  }
+  60% {
+    opacity: 1;
+    transform: rotateY(-10deg) scale(1.08);
+  }
+  80% {
+    transform: rotateY(8deg) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+  }
+}
 /* Center main containers on all pages */
 .center-container {
   display: flex;
@@ -187,13 +209,15 @@ h2{
 
 /* 🔐 Login Container */
 .login-container {
-  background: linear-gradient(to bottom right, #b3e5fc, #e1f5fe);
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  background: linear-gradient(135deg, #b3e5fc 0%, #e1f5fe 100%);
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  width: 400px;
+  max-width: 90vw;
   text-align: center;
   margin: 4rem auto 0 auto;
+  border: 1.5px solid #90caf9;
 }
 
 form label {

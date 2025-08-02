@@ -119,7 +119,7 @@
 
     async function fetchConfigs() {
       try {
-        const firebaseResponse = await fetch('https://refugee-support.onrender.com/firebaseconfig');
+        const firebaseResponse = await fetch('https://test-veqa.onrender.com/firebaseconfig');
         if (!firebaseResponse.ok) throw new Error(`HTTP error! status: ${firebaseResponse.status}`);
         firebaseConfig = await firebaseResponse.json();
 
@@ -186,7 +186,7 @@
           const systemMessage = `Only answer if the user’s message is clearly related to refugee support (e.g. asylum, displaced persons, humanitarian aid, resettlement, education, employment, legal rights, health, etc.). You may also respond to polite greetings like “hi” or “hello” with a friendly welcome message. If unrelated, politely decline and explain.`
 
           try {
-        const response = await fetch('https://refugee-support.onrender.com/gpt4o', {
+        const response = await fetch('https://test-veqa.onrender.com/gpt4o', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
