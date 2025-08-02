@@ -136,7 +136,7 @@ All user preferences, trip data, and chatbot interactions are stored/retrieved f
 ### Project Demo
 # Video
 https://drive.google.com/file/d/1PSbDcUJknK5XKtEaTcdxqhzokE_2mTNi/view?usp=drive_link
-*Explain what the video demonstrates*
+
 
 
 ## Team Contributions
